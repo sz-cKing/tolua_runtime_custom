@@ -43,6 +43,6 @@
 void tolua_openint64(lua_State* L);
 int  tolua_newint64(lua_State* L);
 
-int toluaflags;
+extern int toluaflags;
 
 #endif

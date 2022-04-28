@@ -14,7 +14,6 @@ cd ..
 gcc -m64 -O3 -std=gnu99 -shared \
  tolua.c \
  int64.c \
- pb.c \
  lpeg.c \
  struct.c \
  cjson/strbuf.c \
@@ -34,9 +33,11 @@ gcc -m64 -O3 -std=gnu99 -shared \
  luasocket/udp.c \
  luasocket/wsocket.c \
  luasocket/compat.c \
+ lua-protobuf/pb.c \
  -o Plugins/x86_64/tolua.dll \
  -I./ \
  -Iluajit/src \
  -Iluasocket \
+ -Ilua-protobuf \
  -lws2_32 \
  -Wl,--whole-archive window/x86_64/libluajit.a -Wl,--no-whole-archive -static-libgcc -static-libstdc++
